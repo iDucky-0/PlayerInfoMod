@@ -13,37 +13,38 @@ namespace PlayerInfoMod
             {
                 foreach (VRRig vrrig in GorillaParent.instance.vrrigs)
                 {
+                    string name = vrrig.OwningNetPlayer.NickName;
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("FIRST LOGIN")) // Steam
                     {
-                        check(vrrig, Color.white, vrrig.OwningNetPlayer.NickName + " [Steam]", vrrig.OwningNetPlayer.NickName + " [Steam]");
+                        check(vrrig, Color.white, name + " [Steam]", name + " [Steam]");
                     }
                     else // Quest?
                     {
-                        check(vrrig, Color.white, vrrig.OwningNetPlayer.NickName + " [Quest?]", vrrig.OwningNetPlayer.NickName + " [Quest?]");
+                        check(vrrig, Color.white, name + " [Quest?]", name + " [Quest?]");
                     }
 
 
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("LBAAK.")) // Moderator // Yellow
                     {
-                        check(vrrig, Color.yellow, vrrig.OwningNetPlayer.NickName + " [Moderator]", vrrig.OwningNetPlayer.NickName + " [Moderator]");
+                        check(vrrig, Color.yellow, name + " [Moderator]", name + " [Moderator]");
                     }
 
 
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("LBAAD.")) // Lemming // Yellow
                     {
-                        check(vrrig, Color.yellow, vrrig.OwningNetPlayer.NickName + " [Lemming]", vrrig.OwningNetPlayer.NickName + " [Lemming]");
+                        check(vrrig, Color.yellow, name + " [Lemming]", name + " [Lemming]");
                     }
 
 
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("LBADE.")) // Finger Painter // Green
                     {
-                        check(vrrig, Color.green, vrrig.OwningNetPlayer.NickName + " [Finger Painter]", vrrig.OwningNetPlayer.NickName + " [Finger Painter]");
+                        check(vrrig, Color.green, name + " [Finger Painter]", name + " [Finger Painter]");
                     }
 
 
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("LBAGS.")) // Illustrator // Green
                     {
-                        check(vrrig, Color.green, vrrig.OwningNetPlayer.NickName + " [Illustrator]", vrrig.OwningNetPlayer.NickName + " [Illustrator]");
+                        check(vrrig, Color.green, name + " [Illustrator]", name + " [Illustrator]");
                     }
 
 
@@ -51,14 +52,14 @@ namespace PlayerInfoMod
                     {
                         if (vrrig.OwningNetPlayer.UserId == player.UserId)
                         {
-                            check(vrrig, Color.blue, vrrig.OwningNetPlayer.NickName + " [GT1]", vrrig.OwningNetPlayer.NickName + " [GT1]");
+                            check(vrrig, Color.blue, name + " [GT1]", name + " [GT1]");
                         }
                     }
                     if (vrrig.concatStringOfCosmeticsAllowed.Contains("LBACP.")) // Unreleased Sweater // Blue
                     {
                         if (vrrig.OwningNetPlayer.UserId == player.UserId)
                         {
-                            check(vrrig, Color.blue, vrrig.OwningNetPlayer.NickName + " [OddSweater]", vrrig.OwningNetPlayer.NickName + " [OddSweater]");
+                            check(vrrig, Color.blue, name + " [OddSweater]", name + " [OddSweater]");
                         }
                     }
 
@@ -67,14 +68,14 @@ namespace PlayerInfoMod
                     {
                         if (vrrig.OwningNetPlayer.UserId == player.UserId)
                         {
-                            check(vrrig, Color.red, vrrig.OwningNetPlayer.NickName + " [Genesis User]", vrrig.OwningNetPlayer.NickName + " [Genesis User]");
+                            check(vrrig, Color.red, name + " [Genesis User]", name + " [Genesis User]");
                         }
                     }
                     if (player.CustomProperties.ContainsKey("BlehUser")) // Bleh. [Illegal Mod Menu] // Red
                     {
                         if (vrrig.OwningNetPlayer.UserId == player.UserId)
                         {
-                            check(vrrig, Color.red, vrrig.OwningNetPlayer.NickName + " [Bleh User]", vrrig.OwningNetPlayer.NickName + " [Bleh User]");
+                            check(vrrig, Color.red, name + " [Bleh User]", name + " [Bleh User]");
                         }
                     }
                 }
@@ -100,4 +101,4 @@ namespace PlayerInfoMod
 // Colors:
 // Black, Blue, Clear, Cyan, Gray, Green, Grey, Magenta, Red, White, Yellow
 
-// Made code better -NgbatzYT
+// Made code better - NgbatzYT
